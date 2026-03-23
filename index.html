@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>筋肉クイズ / Muscle Quiz | MuscleLove</title>
+  <meta name="description" content="筋肉・筋トレ・栄養の知識をテスト！正解すると画像がアンロック💪 Test your muscle knowledge!">
+  <meta property="og:title" content="筋肉クイズ / Muscle Quiz | MuscleLove">
+  <meta property="og:description" content="筋肉・筋トレ・栄養の4択クイズ！15問中何問正解できる？💪">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="brand">MUSCLELOVE</div>
+    <h1>筋肉クイズ</h1>
+    <div class="subtitle-en">Muscle Quiz</div>
+  </header>
+
+  <main class="container">
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <div class="start-icon">💪</div>
+      <div class="start-desc">
+        <span class="ja">筋肉・筋トレ・栄養の知識を試そう！<br>15問の4択クイズに挑戦！<br>正解すると画像がアンロック！</span>
+        <span class="en">Test your muscle knowledge!<br>15 multiple-choice questions. Unlock images with correct answers!</span>
+      </div>
+      <button id="start-btn" class="btn-primary">スタート / Start</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+      <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+      <div class="quiz-header">
+        <span id="question-number">Q1 / 15</span>
+        <span class="score-display">Score: <span id="score-display">0 / 0</span></span>
+      </div>
+      <div class="question-card">
+        <div id="question-ja" class="question-ja"></div>
+        <div id="question-en" class="question-en"></div>
+      </div>
+      <div id="choices" class="choices"></div>
+      <div id="explanation-box" class="explanation-box hidden">
+        <div id="result-label" class="result-label"></div>
+        <div id="explanation-ja" class="explanation-ja"></div>
+        <div id="explanation-en" class="explanation-en"></div>
+      </div>
+      <button id="next-btn" class="btn-primary hidden">次へ / Next</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="hidden">
+      <div id="result-emoji" class="result-emoji"></div>
+      <div id="result-title-ja" class="result-title-ja"></div>
+      <div id="result-title-en" class="result-title-en"></div>
+      <div id="result-score" class="result-score"></div>
+
+      <div class="gallery-label">アンロック済み画像 / Unlocked Images</div>
+      <div id="result-gallery" class="result-gallery"></div>
+
+      <div class="result-actions">
+        <button id="retry-btn" class="btn-primary">もう一度 / Retry</button>
+        <button id="share-btn" class="btn-secondary">📤 シェアする / Share</button>
+      </div>
+
+      <a href="https://www.patreon.com/cw/MuscleLove" target="_blank" rel="noopener" class="patreon-cta">
+        🔥 もっと画像を見る / See More on Patreon
+        <span class="cta-en">Support MuscleLove on Patreon</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Reward Overlay -->
+  <div id="reward-overlay" class="reward-overlay hidden">
+    <div class="reward-text">🎉 正解！ / Correct!</div>
+    <img id="reward-img" class="reward-img" src="" alt="Reward">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2026 <a href="https://www.patreon.com/cw/MuscleLove" target="_blank" rel="noopener">MuscleLove</a> | Muscle Quiz
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
