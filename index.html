@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>筋肉クイズ / Muscle Quiz | MuscleLove</title>
-  <meta name="description" content="筋肉・筋トレ・栄養の知識をテスト！正解すると画像がアンロック💪 Test your muscle knowledge!">
+  <!-- ML SEO v1 -->
+<title>【無料】筋肉クイズ - クイズブラウザゲーム | MuscleLove</title>
+  <meta name="description" content="【無料・登録不要】筋肉クイズはクイズの暇つぶしブラウザゲーム。筋肉の知識を試せ！全問正解で筋肉博士認定。スマホ・PC両対応。筋肉美女と遊ぶMuscleLove提供のミニゲーム。">
   <meta property="og:title" content="筋肉クイズ / Muscle Quiz | MuscleLove">
   <meta property="og:description" content="筋肉・筋トレ・栄養の4択クイズ！15問中何問正解できる？💪">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
-  <meta property="og:image" content="https://musclelove-777.github.io/muscle-quiz/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta name="twitter:image" content="https://musclelove-777.github.io/muscle-quiz/og.png">
+<!-- ML Analytics: GA4 + Vercel Web Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJLCFVY5TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HJLCFVY5TF', { send_page_view: true });
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<!-- /ML Analytics -->
+<script defer src="https://musclelove-games.vercel.app/ml-events.js" data-ml-events="v1"></script>
 </head>
-<body>
+<body><div data-tag="ml-pr-bar-v1" style="background:#fef3c7;color:#78350f;padding:6px 12px;text-align:center;font-size:12px;border-bottom:1px solid #fcd34d;font-family:system-ui,sans-serif;line-height:1.4">当サイトの記事には広告（アフィリエイトリンク）が含まれる場合があります。掲載順位や紹介内容は当サイトの編集方針に基づきます。</div>
 
   <!-- Header -->
   <header class="header">
@@ -90,6 +97,150 @@
     &copy; 2026 <a href="https://www.patreon.com/cw/MuscleLove" target="_blank" rel="noopener">MuscleLove</a> | Muscle Quiz
   </footer>
 
+  <!-- Rules Modal (ml-rules-*) -->
+  <button id="ml-rules-btn" class="ml-rules-btn" aria-label="Rules">❓ RULES</button>
+  <div id="ml-rules-overlay" class="ml-rules-overlay ml-rules-hidden" role="dialog" aria-modal="true" aria-labelledby="ml-rules-title">
+    <div class="ml-rules-panel" role="document">
+      <button id="ml-rules-close" class="ml-rules-close" aria-label="Close">✕</button>
+      <div class="ml-rules-tabs">
+        <button class="ml-rules-tab ml-rules-tab-active" data-lang="ja">日本語</button>
+        <button class="ml-rules-tab" data-lang="en">English</button>
+      </div>
+      <div id="ml-rules-body-ja" class="ml-rules-body">
+        <h2 id="ml-rules-title" class="ml-rules-h">💪 筋肉クイズ ルール</h2>
+        <h3 class="ml-rules-sub">🎯 目的</h3>
+        <p>筋肉・筋トレ・栄養の4択クイズに挑戦し、正解するたびに隠された画像をアンロックしよう。</p>
+        <h3 class="ml-rules-sub">🕹️ 操作</h3>
+        <ul>
+          <li>「スタート」ボタンでクイズ開始。</li>
+          <li>各問題で4つの選択肢から1つをタップ／クリック。</li>
+          <li>解答後に解説が表示されるので「次へ」で進む。</li>
+          <li>最終結果画面で「もう一度」または「シェア」が選べる。</li>
+        </ul>
+        <h3 class="ml-rules-sub">🏆 スコア</h3>
+        <ul>
+          <li>全15問、正解1問につき1ポイント。</li>
+          <li>正解するとご褒美画像がアンロックされ、結果画面のギャラリーに並ぶ。</li>
+          <li>最終スコアに応じて称号（絵文字＋ランク）が付与される。</li>
+        </ul>
+        <h3 class="ml-rules-sub">💡 Tips</h3>
+        <ul>
+          <li>解説はしっかり読もう。同テーマの問題で役立つ。</li>
+          <li>焦らず選択肢を全部読む：引っかけワードに注意。</li>
+          <li>不正解でも解説でアンロック条件の知識が増える。</li>
+          <li>リトライでスコアアップを狙い、全画像コンプリートを目指そう。</li>
+          <li>もっと画像が見たくなったらPatreonリンクをチェック。</li>
+        </ul>
+      </div>
+      <div id="ml-rules-body-en" class="ml-rules-body ml-rules-hidden">
+        <h2 class="ml-rules-h">💪 Muscle Quiz Rules</h2>
+        <h3 class="ml-rules-sub">🎯 Goal</h3>
+        <p>Answer multiple-choice questions about muscles, training, and nutrition to unlock hidden reward images.</p>
+        <h3 class="ml-rules-sub">🕹️ How to Play</h3>
+        <ul>
+          <li>Tap the Start button to begin.</li>
+          <li>For each question, tap/click one of the 4 choices.</li>
+          <li>After you answer, read the explanation and press Next.</li>
+          <li>On the result screen you can Retry or Share.</li>
+        </ul>
+        <h3 class="ml-rules-sub">🏆 Scoring</h3>
+        <ul>
+          <li>15 questions total, 1 point per correct answer.</li>
+          <li>Each correct answer unlocks a reward image shown in the gallery.</li>
+          <li>Your final score earns a rank title with an emoji badge.</li>
+        </ul>
+        <h3 class="ml-rules-sub">💡 Tips</h3>
+        <ul>
+          <li>Read the explanation carefully - it helps on similar questions.</li>
+          <li>Check every choice before tapping; watch for tricky wording.</li>
+          <li>Even wrong answers teach you something for the next round.</li>
+          <li>Retry to boost your score and collect the full gallery.</li>
+          <li>Want more images? Check the Patreon link at the end.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .ml-rules-btn{position:fixed;top:12px;left:12px;z-index:1000;background:rgba(0,0,0,0.75);color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.03em;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+    .ml-rules-btn:hover{background:rgba(0,0,0,0.9);}
+    .ml-rules-overlay{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.65);display:flex;align-items:center;justify-content:center;padding:16px;}
+    .ml-rules-hidden{display:none !important;}
+    .ml-rules-panel{position:relative;width:min(560px,100%);max-height:80vh;overflow-y:auto;background:#1b1b1f;color:#f4f4f5;border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:20px 22px 24px;box-shadow:0 20px 60px rgba(0,0,0,.5);line-height:1.6;}
+    .ml-rules-close{position:absolute;top:8px;right:10px;background:transparent;border:none;color:#f4f4f5;font-size:20px;cursor:pointer;padding:4px 8px;line-height:1;}
+    .ml-rules-close:hover{color:#ff5577;}
+    .ml-rules-tabs{display:flex;gap:8px;margin:4px 0 14px;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:10px;}
+    .ml-rules-tab{flex:1;background:transparent;color:#bdbdc2;border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:8px 10px;font-size:13px;cursor:pointer;font-weight:600;}
+    .ml-rules-tab-active{background:#ff3b6b;color:#fff;border-color:#ff3b6b;}
+    .ml-rules-h{margin:0 0 10px;font-size:20px;}
+    .ml-rules-sub{margin:14px 0 6px;font-size:15px;color:#ffb3c1;}
+    .ml-rules-body p,.ml-rules-body li{font-size:14px;}
+    .ml-rules-body ul{padding-left:20px;margin:4px 0;}
+    .ml-rules-body li{margin-bottom:4px;}
+  </style>
+
+  <script>
+    (function(){
+      var STORAGE_LANG='ml_lang';
+      var STORAGE_SEEN='ml_qz_seen';
+      var overlay=document.getElementById('ml-rules-overlay');
+      var btn=document.getElementById('ml-rules-btn');
+      var closeBtn=document.getElementById('ml-rules-close');
+      var tabs=document.querySelectorAll('.ml-rules-tab');
+      var bodyJa=document.getElementById('ml-rules-body-ja');
+      var bodyEn=document.getElementById('ml-rules-body-en');
+
+      function applyLang(lang){
+        var l=(lang==='en')?'en':'ja';
+        try{localStorage.setItem(STORAGE_LANG,l);}catch(e){}
+        tabs.forEach(function(t){
+          if(t.getAttribute('data-lang')===l){t.classList.add('ml-rules-tab-active');}
+          else{t.classList.remove('ml-rules-tab-active');}
+        });
+        if(l==='en'){bodyEn.classList.remove('ml-rules-hidden');bodyJa.classList.add('ml-rules-hidden');}
+        else{bodyJa.classList.remove('ml-rules-hidden');bodyEn.classList.add('ml-rules-hidden');}
+      }
+      function openModal(){overlay.classList.remove('ml-rules-hidden');}
+      function closeModal(){overlay.classList.add('ml-rules-hidden');try{localStorage.setItem(STORAGE_SEEN,'1');}catch(e){}}
+
+      btn.addEventListener('click',openModal);
+      closeBtn.addEventListener('click',closeModal);
+      overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.classList.contains('ml-rules-hidden'))closeModal();});
+      tabs.forEach(function(t){t.addEventListener('click',function(e){e.stopPropagation();applyLang(t.getAttribute('data-lang'));});});
+
+      var savedLang='ja';
+      try{savedLang=localStorage.getItem(STORAGE_LANG)||'ja';}catch(e){}
+      applyLang(savedLang);
+
+      var seen='0';
+      try{seen=localStorage.getItem(STORAGE_SEEN)||'0';}catch(e){}
+      if(seen!=='1'){openModal();}
+    })();
+  </script>
+
   <script src="game.js"></script>
+<!-- ML CrossLink v1: 他のゲーム回遊用フローティングリンク -->
+<a href="https://musclelove-games.vercel.app/?utm_source=ml-game&utm_medium=cross-link&utm_campaign=muscle-quiz"
+   target="_top" rel="noopener"
+   id="ml-crosslink"
+   style="position:fixed;left:8px;bottom:8px;z-index:99998;
+          background:linear-gradient(135deg,#FF6B6B,#FF2D3A);color:#fff;
+          padding:6px 11px;border-radius:18px;font-size:11px;font-weight:700;
+          font-family:system-ui,-apple-system,'Hiragino Sans',sans-serif;
+          text-decoration:none;box-shadow:0 4px 14px rgba(255,45,58,0.5);
+          border:1px solid rgba(255,255,255,0.3);
+          line-height:1;display:inline-flex;align-items:center;gap:4px;
+          opacity:0.92;transition:transform .15s,opacity .15s;">
+  🎮&nbsp;他58本</a>
+<script>
+  (function(){
+    var el = document.getElementById('ml-crosslink');
+    if (!el) return;
+    el.addEventListener('mouseover', function(){ el.style.opacity='1'; el.style.transform='scale(1.06)'; });
+    el.addEventListener('mouseout',  function(){ el.style.opacity='0.92'; el.style.transform='scale(1.0)'; });
+  })();
+</script>
+<!-- /ML CrossLink v1 -->
 </body>
 </html>
